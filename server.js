@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 var rootpath="D:/ITI_courses/Node Js/day4/ASSIGN. SOL";
 
 app.get('/', function(req, res){
-   res.sendFile(rootpath+'/display.html');});
+   res.sendFile('display.html');});
 users = [];
 io.on('connection', function(socket){
    console.log('A user connected');
