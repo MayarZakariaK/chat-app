@@ -3,9 +3,10 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 var rootpath="D:/ITI_courses/Node Js/day4/ASSIGN. SOL";
+app.use(express.static(__dirname+'/public'));
 
 app.get('/', function(req, res){
-   res.sendFile('display.html');});
+   res.sendFile(__dirname+'/public'+'/display.html');});
 users = [];
 io.on('connection', function(socket){
    console.log('A user connected');
